@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'article.css' %}" />
+	<title>{{heading}}</title>
+</head>
+<body>
+	<div class="container">
+		<h1>{{heading}}</h1>
+		<h4>By {{author}} First published on {{pub_date}}</h3>
+		<div class="content">
+			{{content|safe}}
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+.container {
+	display: block;
+	min-width: 400px;
+	max-width: 800px;
+	width: 80%;
+	background-color: rgba(230,238,173,0.5);
+	height: 100%;
+	margin: 0 auto 0 auto;
+	border-left: solid #bfbfbf 1px;
+	border-right: solid #bfbfbf 1px;
+}
+
+.content{
+	width: 100%;
+}

@@ -41,6 +41,8 @@ class Article(models.Model):
 	date_published = models.DateTimeField(auto_now=True)
 	date_updated = models.DateTimeField(auto_now=True)
 
+	shortTitle = models.CharField(max_length=50, primary_key=True, default="Title")
+
 	author = models.ForeignKey(Author)
 	heading = models.CharField(max_length=50)
 	caption = models.CharField(max_length=100)
@@ -51,7 +53,11 @@ class Article(models.Model):
 	title_image = models.ForeignKey(Image)
 
 	def __unicode__(self):
-		return self.heading
+		return self.shortTitle
+
+	def getAuthor(self):
+		u = self.author.user
+		return u.first_name + " " + u.last_name
 
 class ImageGallary(models.Model):
 	article = models.ForeignKey(Article)
