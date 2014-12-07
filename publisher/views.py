@@ -14,7 +14,8 @@ def get_article(request, article_id):
 		'author': article.getAuthor(),
 		'heading': article.heading,
 		'pub_date': article.date_published,
-		'content': md(article.content)
+		'content': md(article.content),
+		'img_url': 'http://127.0.0.1:8000/' + article.title_image.image_file.url,
 	}
 	
 	return render(request, 'publisher/article_basic.html', options)

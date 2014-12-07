@@ -8,6 +8,10 @@
 	<title>{{heading}}</title>
 </head>
 <body>
+	{% load static %}
+	<div class="image-container">
+		<img src="{{ img_url }}">
+	</div>
 	<div class="container">
 		<h1>{{heading}}</h1>
 		<h4>By {{author}} First published on {{pub_date}}</h3>
