@@ -1,0 +1,13 @@
+{% if no_content == False %}
+	<ul>
+		{% for a in articles %}
+			<li>
+				<div class="article-item">
+					<a href="/article/{{ a.shortTitle }}"><h1>{{ a.heading }}</h1></a>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<h3>Sorry, there is no content at times point in time. Check back later!</h3>
+{% endif %}
